@@ -10,7 +10,7 @@ export function Navbar() {
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/services", label: "Services" },
-    { to: "/projects", label: "Projects" },
+    { to: "/careers", label: "Careers" },
     { to: "/blogs", label: "Blog" },
   ] as const;
 

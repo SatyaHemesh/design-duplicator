@@ -10,25 +10,21 @@ import {
 
 import appCss from "../styles.css?url";
 
+import { Layout } from "@/components/Layout";
+
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <Layout>
+      <section className="py-24 px-4 text-center">
+        <h1 className="text-[10rem] md:text-[14rem] leading-none font-black tracking-tighter text-foreground">404</h1>
+        <p className="text-muted-foreground max-w-md mx-auto mb-8">
+          Sorry, the page you're looking for doesn't exist. If you think something is broken, report a problem.
         </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
-      </div>
-    </div>
+        <Link to="/" className="inline-flex items-center gap-2 bg-red text-primary-foreground px-7 py-3.5 rounded-full font-semibold hover:bg-red-light transition-colors">
+          Back To Home <span>↗</span>
+        </Link>
+      </section>
+    </Layout>
   );
 }
 
