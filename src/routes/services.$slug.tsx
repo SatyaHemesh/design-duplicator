@@ -30,7 +30,7 @@ const faqs = [
 
 function ServiceDetailPage() {
   const params = Route.useParams();
-  const title = params.slug.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
+  const title = params.slug.split("-").map((w: string) => w[0].toUpperCase() + w.slice(1)).join(" ");
   const [open, setOpen] = useState(0);
 
   return (
